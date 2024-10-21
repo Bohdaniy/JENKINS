@@ -25,10 +25,12 @@ pipeline {
                 }
             }
             steps {
-                // Установка необхідних залежностей
-                sh 'apk add --update python3 py-pip'
-                sh 'python3 -m venv /venv'
-                sh 'pip install unittest-xml-reporting'
+                script {
+                    // Установка необхідних залежностей
+                    sh 'apk add --update py3-pip py3-setuptools py3-wheel'
+                    sh 'python3 -m venv /venv'
+                    sh '. /venv/bin/activate && pip install unittest-xml-reporting'
+                }
 
                 // Запуск тестів
                 sh 'python3 Lab5/Test.py'
