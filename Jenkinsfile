@@ -26,12 +26,18 @@ pipeline {
             }
             steps {
                 script {
-                    // Установка необхідних залежностей
-                    sh 'apk add --update python3 py-pip'
-                    sh 'python3 -m venv /venv'
-                    sh 'source /venv/bin/activate && pip install unittest-xml-reporting'
+                    script {
+    // Установка необхідних залежностей
+                 sh 'apk add --update python3 py-pip'
+                 sh 'python3 -m venv /venv'
 
-                    sh 'python3 Testing.py'
+    // Активуємо віртуальне середовище і встановлюємо пакети
+                 sh '. /venv/bin/activate && pip install unittest-xml-reporting xmlrunner'
+
+    // Запускаємо тести
+    sh '. /venv/bin/activate && python3 Testing.py'
+}
+
                 }
             }
             post {
