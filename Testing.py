@@ -1,5 +1,6 @@
 import unittest
 from main import OrderManager
+import xmlrunner
 import logging
 
 class OrderTest(unittest.TestCase):
@@ -79,6 +80,6 @@ class OrderTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-import xmlrunner
-runner=xmlrunner.XMLTestRunner(output='test-reports')
-unittest.main(testRunner=runner)
+with open('test-reports/test_results.xml', 'wb') as output:
+    runner = xmlrunner.XMLTestRunner(output=output)
+    unittest.main(testRunner=runner, exit=False)
