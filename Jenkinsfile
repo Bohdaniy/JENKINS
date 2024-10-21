@@ -33,7 +33,7 @@ pipeline {
                 }
 
                 // Запуск тестів
-                sh 'python3 /home/ptichka/PycharmProjects/JENKINS/JENKINS/Testing.py'
+                sh 'python3 Testing.py'
             }
             post {
                 always {
