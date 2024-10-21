@@ -27,14 +27,10 @@ pipeline {
             steps {
                 script {
                     // Установка необхідних залежностей
-                    sh 'pip install --upgrade pip'
-                    sh 'pip install xmlrunner unittest-xml-reporting'
-
-                    // Створення та активація віртуального середовища
+                    sh 'apk add --update python3 py-pip'
                     sh 'python3 -m venv /venv'
-                    sh '. /venv/bin/activate'
+                    sh 'source /venv/bin/activate && pip install unittest-xml-reporting'
 
-                    // Запуск тестів
                     sh 'python3 Testing.py'
                 }
             }
