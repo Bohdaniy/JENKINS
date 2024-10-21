@@ -61,24 +61,23 @@ pipeline {
                 }
             }
         }
-   stage ('Push Docker Image to Docker Hub') {
-    agent any
-    steps {
-        script {
-            echo "Pushing Docker image to Docker Hub..."
-            // Логін до Docker Hub за допомогою credentials Jenkins
-            withCredentials([usernamePassword(credentialsId: 'docker', passwordVariable: 'DOCKER_CREDI_PSW', usernameVariable: 'DOCKER_CREDI_USR')]) {
-                // Логін до Docker Hub
-                sh "docker login -u $DOCKER_CREDI_USR -p $DOCKER_CREDI_PSW"
-                // Тегування Docker образу з малими літерами
-                sh "docker tag $DOCKER_IMAGE_NAME:$DOCKER_TAG $DOCKER_CREDI_USR/$(echo $DOCKER_IMAGE_NAME | tr '[:upper:]' '[:lower:]'):$DOCKER_TAG"
-                // Завантаження Docker образу
-                sh "docker push $DOCKER_CREDI_USR/$(echo $DOCKER_IMAGE_NAME | tr '[:upper:]' '[:lower:]'):$DOCKER_TAG"
+        stage ('Push Docker Image to Docker Hub') {
+            agent any
+            steps {
+                script {
+                    echo "Pushing Docker image to Docker Hub..."
+                    // Логін до Docker Hub за допомогою credentials Jenkins
+                    withCredentials([usernamePassword(credentialsId: 'docker', passwordVariable: 'DOCKER_CREDI_PSW', usernameVariable: 'DOCKER_CREDI_USR')]) {
+                        // Логін до Docker Hub
+                        sh "docker login -u $DOCKER_CREDI_USR -p $DOCKER_CREDI_PSW"
+                        // Тегування Docker образу з малими літерами
+                        sh "docker tag $DOCKER_IMAGE_NAME:$DOCKER_TAG $DOCKER_CREDI_USR/$(echo $DOCKER_IMAGE_NAME | tr '[:upper:]' '[:lower:]'):$DOCKER_TAG"
+                        // Завантаження Docker образу
+                        sh "docker push $DOCKER_CREDI_USR/$(echo $DOCKER_IMAGE_NAME | tr '[:upper:]' '[:lower:]'):$DOCKER_TAG"
+                    }
+                }
             }
         }
-    }
-}
-
     }
     post {
         always {
