@@ -2,7 +2,7 @@ pipeline {
     options { timestamps() }
     agent none
     environment {
-        DOCKER_CREDI = credentials('jenkins')
+        DOCKER_CREDI = credentials('docker')
     }
     stages {
         stage('Check scm') {
