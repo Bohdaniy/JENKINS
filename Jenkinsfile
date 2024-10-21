@@ -1,34 +1,41 @@
 pipeline {
-    options {timestamps()}
+    options { timestamps() }
     agent none
-    environment{
+    environment {
         DOCKER_CREDI = credentials('docker_hub')
     }
-    stages{
-        stage ('Check scm'){
+    stages {
+        stage('Check scm') {
             agent any
             steps {
                 checkout scm
             }
         }
-        stage ('Build') {
+        stage('Build') {
             steps {
                 echo "Building ... ${BUILD_NUMBER}"
                 echo "Build completed"
             }
         }
-        stage ('Test') {
-            agent { docker { image 'alpine'
-                            args '-u=\"root\"'}
-                    }
+        stage('Test') {
+            agent {
+                docker {
+                    image 'alpine'
+                    args '-u="root"'
+                }
+            }
             steps {
+                // Установка необхідних залежностей
                 sh 'apk add --update python3 py-pip'
                 sh 'python3 -m venv /venv'
-                sh 'source /venv/bin/activate && pip install unittest-xml-reporting'
-                sh 'source /venv/bin/activate && python3 Lab5/Test.py'
+                sh 'pip install unittest-xml-reporting'
+
+                // Запуск тестів
+                sh 'python3 Lab5/Test.py'
             }
             post {
                 always {
+                    // Публікація результатів тестів у форматі JUnit
                     junit 'test-reports/*.xml'
                 }
                 success {
@@ -39,3 +46,5 @@ pipeline {
                 }
             }
         }
+    }
+}
