@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58be0936-29dd-4fea-859b-518d3d6c8f14" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Testing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Testing.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,12 +30,12 @@
     &quot;assignee&quot;: &quot;Bohdaniy&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Bohdaniy/Jenkins.git&quot;,
-    &quot;accountId&quot;: &quot;e141ebc4-a042-4bd8-aba6-65ad3aa1d14c&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "git@github.com:Bohdaniy/JENKINS.git",
+    "accountId": "b1f38856-6eba-443c-a4d0-1b9b86a15cf3"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -44,31 +45,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python tests.Python tests for Testing.OrderTest.executor": "Run",
-    "Python tests.Python tests for Testing.OrderTest.test_add_order.executor": "Run",
-    "Python tests.Python tests for Testing.OrderTest.test_add_order_invalid_id.executor": "Run",
-    "Python tests.Python tests for Testing.OrderTest.test_find_order_by_id.executor": "Run",
-    "Python tests.Python tests for Testing.OrderTest.test_get_all_orders.executor": "Run",
-    "Python tests.Python tests for Testing.OrderTest.test_get_order_count.executor": "Run",
-    "Python tests.Python tests for Testing.OrderTest.test_remove_last_order.executor": "Run",
-    "Python tests.Python tests for Testing.OrderTest.test_remove_order_by_id.executor": "Run",
-    "Python tests.Python tests for Testing.TestOrderManager.executor": "Run",
-    "Python tests.Python tests for Testing.TestOrderManager.test_remove_last_order_empty.executor": "Run",
-    "Python tests.Python tests in Testing.py.executor": "Run",
-    "Python.main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/ptichka/PycharmProjects/JENKINS/JENKINS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python tests.Python tests for Testing.OrderTest.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for Testing.OrderTest.test_add_order.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for Testing.OrderTest.test_add_order_invalid_id.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for Testing.OrderTest.test_find_order_by_id.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for Testing.OrderTest.test_get_all_orders.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for Testing.OrderTest.test_get_order_count.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for Testing.OrderTest.test_remove_last_order.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for Testing.OrderTest.test_remove_order_by_id.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for Testing.TestOrderManager.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for Testing.TestOrderManager.test_remove_last_order_empty.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in Testing.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/ptichka/PycharmProjects/JENKINS/JENKINS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Python.main">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="Test program" />
@@ -79,8 +80,9 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.12 (Docker laboratory)" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
@@ -211,7 +213,8 @@
       <workItem from="1728314510728" duration="971000" />
       <workItem from="1728405150129" duration="29000" />
       <workItem from="1729496266031" duration="557000" />
-      <workItem from="1729497746045" duration="353000" />
+      <workItem from="1729497746045" duration="842000" />
+      <workItem from="1729506404731" duration="746000" />
     </task>
     <servers />
   </component>
