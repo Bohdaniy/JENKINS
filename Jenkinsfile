@@ -14,6 +14,7 @@ pipeline {
             }
         }
         stage ('Build') {
+            agent any
             steps {
                 echo "Building ... ${BUILD_NUMBER}"
                 echo "Build completed"
@@ -80,7 +81,9 @@ pipeline {
         always {
             echo "Cleaning up Docker images..."
             // Очистка Docker образів після завершення процесу
-            sh 'docker rmi $DOCKER_IMAGE_NAME:$DOCKER_TAG'
+            script {
+                sh 'docker rmi $DOCKER_IMAGE_NAME:$DOCKER_TAG'
+            }
         }
     }
 }
