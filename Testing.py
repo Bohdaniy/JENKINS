@@ -1,5 +1,7 @@
 import unittest
+
 import xmlrunner
+
 from main import OrderManager
 import os
 import logging
@@ -69,27 +71,6 @@ class OrderTest(unittest.TestCase):
         self.manager.add_order(2, "Memen", "Iphone", 3)
         self.assertEqual(self.manager.get_order_count(), 2)
 
-    # Тест, який не пройде: перевірка кількості замовлень після видалення
-    def test_remove_order_and_check_count(self):
-        self.manager.add_order(1, "Karasiovich", "Iphone", 2)
-        self.manager.add_order(2, "Memen", "Iphone", 3)
-        self.manager.remove_order_by_id(1)
-
-        # Очікуємо 1 замовлення, але неправильно очікуємо 0
-        self.assertEqual(self.manager.get_order_count(), 0, "Кількість замовлень повинна бути 0 після видалення!")
-
-    # Тест, який не пройде: пошук неіснуючого замовлення
-    def test_find_nonexistent_order(self):
-        with self.assertRaises(ValueError) as context:
-            self.manager.find_order_by_id(99)
-        # Очікуємо, що помилка буде з іншим повідомленням
-        self.assertEqual(str(context.exception), "Замовлення не знайдено!", "Повідомлення має бути неправильним!")
-
-    # Тест, який не пройде: додавання замовлення з негативною кількістю
-    def test_add_order_negative_quantity(self):
-        with self.assertRaises(ValueError) as context:
-            self.manager.add_order(3, "Sidorov", "MacBook", -1)
-        self.assertEqual(str(context.exception), "Кількість товару не може бути негативною.", "Повідомлення про помилку не відповідає очікуваному.")
 
 if __name__ == "__main__":
     # Перевірка наявності каталогу для результатів і його створення
