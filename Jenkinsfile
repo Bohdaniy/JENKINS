@@ -81,7 +81,7 @@ pipeline {
         always {
             echo "Cleaning up Docker images..."
             // Очистка Docker образів після завершення процесу
-            node {
+            node('master') {
                 sh 'docker rmi $DOCKER_IMAGE_NAME:$DOCKER_TAG'
             }
         }
