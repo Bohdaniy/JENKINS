@@ -51,6 +51,7 @@ pipeline {
             }
         }
         stage ('Build Docker Image') {
+            agent any
             steps {
                 script {
                     echo "Building Docker image... ${BUILD_NUMBER}"
@@ -60,6 +61,7 @@ pipeline {
             }
         }
         stage ('Push Docker Image to Docker Hub') {
+            agent any
             steps {
                 script {
                     echo "Pushing Docker image to Docker Hub..."
