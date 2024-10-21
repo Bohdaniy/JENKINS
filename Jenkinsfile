@@ -2,7 +2,9 @@ pipeline {
     options {timestamps()}
     agent none
     environment {
-        DOCKER_CREDI = credentials('docker')
+        DOCKER_CREDI = credentials('docker')  // Встановіть свої креденціали для Docker
+        DOCKER_IMAGE_NAME = "Bohdaniy/laboratory4"  // Назва вашого Docker образу
+        DOCKER_TAG = "1.11"  // Тег для вашого образу
     }
     stages {
         stage ('Check scm') {
@@ -47,6 +49,33 @@ pipeline {
                     echo "Tests failed"
                 }
             }
+        }
+        stage ('Build Docker Image') {
+            steps {
+                script {
+                    echo "Building Docker image... ${BUILD_NUMBER}"
+                    // Створення Docker образу
+                    sh 'docker build -t $DOCKER_IMAGE_NAME:$DOCKER_TAG .'
+                }
+            }
+        }
+        stage ('Push Docker Image to Docker Hub') {
+            steps {
+                script {
+                    echo "Pushing Docker image to Docker Hub..."
+                    // Логін до Docker Hub
+                    sh 'echo $DOCKER_CREDI_PSW | docker login -u $DOCKER_CREDI_USR --password-stdin'
+                    // Завантаження Docker образу
+                    sh 'docker push $DOCKER_IMAGE_NAME:$DOCKER_TAG'
+                }
+            }
+        }
+    }
+    post {
+        always {
+            echo "Cleaning up Docker images..."
+            // Очистка Docker образів після завершення процесу
+            sh 'docker rmi $DOCKER_IMAGE_NAME:$DOCKER_TAG'
         }
     }
 }
