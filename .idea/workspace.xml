@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="58be0936-29dd-4fea-859b-518d3d6c8f14" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Testing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,12 +29,12 @@
     &quot;assignee&quot;: &quot;Bohdaniy&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "git@github.com:Bohdaniy/JENKINS.git",
-    "accountId": "b1f38856-6eba-443c-a4d0-1b9b86a15cf3"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:Bohdaniy/JENKINS.git&quot;,
+    &quot;accountId&quot;: &quot;b1f38856-6eba-443c-a4d0-1b9b86a15cf3&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -214,6 +214,7 @@
       <workItem from="1729496266031" duration="557000" />
       <workItem from="1729497746045" duration="842000" />
       <workItem from="1729506404731" duration="4123000" />
+      <workItem from="1729530776995" duration="178000" />
     </task>
     <servers />
   </component>
