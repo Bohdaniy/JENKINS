@@ -65,10 +65,13 @@ pipeline {
             steps {
                 script {
                     echo "Pushing Docker image to Docker Hub..."
-                    // Логін до Docker Hub
-                    sh 'echo $DOCKER_CREDI_PSW | docker login -u $DOCKER_CREDI_USR --password-stdin'
-                    // Завантаження Docker образу
-                    sh 'docker push $DOCKER_IMAGE_NAME:$DOCKER_TAG'
+                    // Логін до Docker Hub за допомогою credential'ів Jenkins
+                    withCredentials([usernamePassword(credentialsId: 'docker', passwordVariable: 'DOCKER_CREDI_PSW', usernameVariable: 'DOCKER_CREDI_USR')]) {
+                        // Логін до Docker Hub
+                        sh "docker login -u $DOCKER_CREDI_USR -p $DOCKER_CREDI_PSW"
+                        // Завантаження Docker образу
+                        sh "docker push $DOCKER_IMAGE_NAME:$DOCKER_TAG"
+                    }
                 }
             }
         }
