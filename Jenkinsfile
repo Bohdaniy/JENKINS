@@ -61,7 +61,7 @@ pipeline {
                 }
             }
         }
-        stage ('Push Docker Image to Docker Hub') {
+   stage ('Push Docker Image to Docker Hub') {
     agent any
     steps {
         script {
@@ -70,10 +70,10 @@ pipeline {
             withCredentials([usernamePassword(credentialsId: 'docker', passwordVariable: 'DOCKER_CREDI_PSW', usernameVariable: 'DOCKER_CREDI_USR')]) {
                 // Логін до Docker Hub
                 sh "docker login -u $DOCKER_CREDI_USR -p $DOCKER_CREDI_PSW"
-                // Тегування Docker образу
-                sh "docker tag $DOCKER_IMAGE_NAME:$DOCKER_TAG $DOCKER_CREDI_USR/$DOCKER_IMAGE_NAME:$DOCKER_TAG"
+                // Тегування Docker образу з малими літерами
+                sh "docker tag $DOCKER_IMAGE_NAME:$DOCKER_TAG $DOCKER_CREDI_USR/$(echo $DOCKER_IMAGE_NAME | tr '[:upper:]' '[:lower:]'):$DOCKER_TAG"
                 // Завантаження Docker образу
-                sh "docker push $DOCKER_CREDI_USR/$DOCKER_IMAGE_NAME:$DOCKER_TAG"
+                sh "docker push $DOCKER_CREDI_USR/$(echo $DOCKER_IMAGE_NAME | tr '[:upper:]' '[:lower:]'):$DOCKER_TAG"
             }
         }
     }
