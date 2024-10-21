@@ -57,7 +57,7 @@ pipeline {
                 script {
                     echo "Building Docker image... ${BUILD_NUMBER}"
                     // Створення Docker образу
-                    sh 'docker build -t ${DOCKER_IMAGE_NAME}:${DOCKER_TAG} .'
+                    sh "docker build -t ${DOCKER_IMAGE_NAME}:${DOCKER_TAG} ."
                 }
             }
         }
@@ -84,7 +84,7 @@ pipeline {
             echo "Cleaning up Docker images..."
             // Очистка Docker образів після завершення процесу
             node('master') {
-                sh 'docker rmi ${DOCKER_IMAGE_NAME}:${DOCKER_TAG}'
+                sh "docker rmi ${DOCKER_IMAGE_NAME}:${DOCKER_TAG}"
             }
         }
     }
