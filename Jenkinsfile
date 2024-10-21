@@ -1,11 +1,11 @@
 pipeline {
     options {timestamps()}
     agent none
-    environment{
+    environment {
         DOCKER_CREDI = credentials('docker')
     }
-    stages{
-        stage ('Check scm'){
+    stages {
+        stage ('Check scm') {
             agent any
             steps {
                 checkout scm
@@ -18,14 +18,23 @@ pipeline {
             }
         }
         stage ('Test') {
-            agent { docker { image 'alpine' 
-                            args '-u=\"root\"'}
-                    }
+            agent {
+                docker {
+                    image 'python:3.12-alpine'
+                    args '-u="root"'
+                }
+            }
             steps {
-                sh 'apk add --update python3 py-pip'
-                sh 'python3 -m venv /venv'
-                sh 'source /venv/bin/activate && pip install unittest-xml-reporting'
-                sh 'source /venv/bin/activate && python3 Testing.py'
+                script {
+                    // Встановлення Python і pip, створення віртуального середовища
+                    sh '''
+                        apk add --no-cache python3 py3-pip && \
+                        python3 -m venv /venv && \
+                        /venv/bin/pip install unittest-xml-reporting
+                    '''
+                    // Запуск тестів
+                    sh '/venv/bin/python3 Testing.py'
+                }
             }
             post {
                 always {
@@ -39,3 +48,5 @@ pipeline {
                 }
             }
         }
+    }
+}
