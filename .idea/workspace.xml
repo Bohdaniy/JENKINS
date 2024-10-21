@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="58be0936-29dd-4fea-859b-518d3d6c8f14" name="Changes" comment="" />
+    <list default="true" id="58be0936-29dd-4fea-859b-518d3d6c8f14" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,31 +44,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python tests.Python tests for Testing.OrderTest.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for Testing.OrderTest.test_add_order.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for Testing.OrderTest.test_add_order_invalid_id.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for Testing.OrderTest.test_find_order_by_id.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for Testing.OrderTest.test_get_all_orders.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for Testing.OrderTest.test_get_order_count.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for Testing.OrderTest.test_remove_last_order.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for Testing.OrderTest.test_remove_order_by_id.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for Testing.TestOrderManager.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for Testing.TestOrderManager.test_remove_last_order_empty.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in Testing.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Project/Test program&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python tests.Python tests for Testing.OrderTest.executor": "Run",
+    "Python tests.Python tests for Testing.OrderTest.test_add_order.executor": "Run",
+    "Python tests.Python tests for Testing.OrderTest.test_add_order_invalid_id.executor": "Run",
+    "Python tests.Python tests for Testing.OrderTest.test_find_order_by_id.executor": "Run",
+    "Python tests.Python tests for Testing.OrderTest.test_get_all_orders.executor": "Run",
+    "Python tests.Python tests for Testing.OrderTest.test_get_order_count.executor": "Run",
+    "Python tests.Python tests for Testing.OrderTest.test_remove_last_order.executor": "Run",
+    "Python tests.Python tests for Testing.OrderTest.test_remove_order_by_id.executor": "Run",
+    "Python tests.Python tests for Testing.TestOrderManager.executor": "Run",
+    "Python tests.Python tests for Testing.TestOrderManager.test_remove_last_order_empty.executor": "Run",
+    "Python tests.Python tests in Testing.py.executor": "Run",
+    "Python.main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/home/ptichka/PycharmProjects/JENKINS/JENKINS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Python.main">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="Test program" />
@@ -183,8 +186,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-PY-242.21829.153" />
-        <option value="bundled-python-sdk-464836ebc622-b74155a9e76b-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-242.21829.153" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PY-242.23339.19" />
+        <option value="bundled-python-sdk-0029f7779945-399fe30bd8c1-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-242.23339.19" />
       </set>
     </attachedChunks>
   </component>
@@ -208,6 +211,7 @@
       <workItem from="1728314510728" duration="971000" />
       <workItem from="1728405150129" duration="29000" />
       <workItem from="1729496266031" duration="557000" />
+      <workItem from="1729497746045" duration="353000" />
     </task>
     <servers />
   </component>
