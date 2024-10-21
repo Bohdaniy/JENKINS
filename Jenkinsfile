@@ -2,9 +2,7 @@ pipeline {
     options {timestamps()}
     agent none
     environment {
-        DOCKER_CREDI = credentials('docker')  // Встановіть свої креденціали для Docker
-        DOCKER_IMAGE_NAME = "Bohdaniy/laboratory4"  // Назва вашого Docker образу
-        DOCKER_TAG = "latest"  // Тег для вашого образу
+        DOCKER_CREDI = credentials('docker')
     }
     stages {
         stage ('Check scm') {
@@ -14,7 +12,6 @@ pipeline {
             }
         }
         stage ('Build') {
-            agent any
             steps {
                 echo "Building ... ${BUILD_NUMBER}"
                 echo "Build completed"
@@ -49,46 +46,6 @@ pipeline {
                 failure {
                     echo "Tests failed"
                 }
-            }
-        }
-        stage ('Build Docker Image') {
-            agent any
-            steps {
-                script {
-                    echo "Building Docker image... ${BUILD_NUMBER}"
-                    // Створення Docker образу
-                    sh "docker build -t ${DOCKER_IMAGE_NAME}:${DOCKER_TAG} ."
-                }
-            }
-        }
-        stage ('Push Docker Image to Docker Hub') {
-            agent any
-            steps {
-                script {
-                    echo "Pushing Docker image to Docker Hub..."
-                    // Логін до Docker Hub за допомогою credentials Jenkins
-                    withCredentials([usernamePassword(credentialsId: 'docker', passwordVariable: 'DOCKER_CREDI_PSW', usernameVariable: 'DOCKER_CREDI_USR')]) {
-                        // Логін до Docker Hub
-                        sh "docker login -u ${DOCKER_CREDI_USR} -p ${DOCKER_CREDI_PSW}"
-
-                        // Тегування Docker образу
-                        def imageName = "${DOCKER_CREDI_USR}/" + "${DOCKER_IMAGE_NAME.toLowerCase()}"
-
-                        sh "docker tag ${DOCKER_IMAGE_NAME}:${DOCKER_TAG} ${imageName}:${DOCKER_TAG}"
-
-                        // Завантаження Docker образу
-                        sh "docker push ${imageName}:${DOCKER_TAG}"
-                    }
-                }
-            }
-        }
-    }
-    post {
-        always {
-            echo "Cleaning up Docker images..."
-            // Очистка Docker образів після завершення процесу
-            node('master') {
-                sh "docker rmi ${DOCKER_IMAGE_NAME}:${DOCKER_TAG}"
             }
         }
     }
