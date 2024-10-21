@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c517fe13-d773-49f9-bda9-a2d218580750" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Test1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestingFile.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,36 +22,49 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Bohdaniy&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Kavabangaua/lab2_team.git&quot;,
+    &quot;accountId&quot;: &quot;e141ebc4-a042-4bd8-aba6-65ad3aa1d14c&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2me3FhSQjK7LzaoHsbYWF7ketYL" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python tests.Python tests for TestingFile.MyTestCase.test_add_child.executor": "Run",
-    "Python tests.Python tests for TestingFile.MyTestCase.test_add_child_grades.executor": "Run",
-    "Python tests.Python tests for TestingFile.MyTestCase.test_add_child_subjects.executor": "Run",
-    "Python tests.Python tests for TestingFile.MyTestCase.test_add_existing_child.executor": "Run",
-    "Python tests.Python tests for TestingFile.MyTestCase.test_add_grades_to_new_child.executor": "Run",
-    "Python tests.Python tests for TestingFile.MyTestCase.test_add_new_subject_with_grades.executor": "Run",
-    "Python tests.Python tests for TestingFile.MyTestCase.test_add_subject_to_existing_child.executor": "Run",
-    "Python tests.Python tests in TestingFile.py.executor": "Run",
-    "Python.main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python tests.Python tests for TestingFile.MyTestCase.test_add_child.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for TestingFile.MyTestCase.test_add_child_grades.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for TestingFile.MyTestCase.test_add_child_subjects.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for TestingFile.MyTestCase.test_add_existing_child.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for TestingFile.MyTestCase.test_add_grades_to_new_child.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for TestingFile.MyTestCase.test_add_new_subject_with_grades.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for TestingFile.MyTestCase.test_add_subject_to_existing_child.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in TestingFile.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Bohdaniy&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Project/Test program&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Python tests.Python tests in TestingFile.py">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="Test1" />
@@ -190,6 +196,8 @@
       <option name="presentableId" value="Default" />
       <updated>1727423112708</updated>
       <workItem from="1727423114246" duration="3901000" />
+      <workItem from="1727612393072" duration="68000" />
+      <workItem from="1728314485670" duration="24000" />
     </task>
     <servers />
   </component>
