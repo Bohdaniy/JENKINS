@@ -4,7 +4,7 @@ pipeline {
     environment {
         DOCKER_CREDI = credentials('docker')  // Встановіть свої креденціали для Docker
         DOCKER_IMAGE_NAME = "Bohdaniy/laboratory4"  // Назва вашого Docker образу
-        DOCKER_TAG = "1.11"  // Тег для вашого образу
+        DOCKER_TAG = "latest"  // Тег для вашого образу
     }
     stages {
         stage ('Check scm') {
