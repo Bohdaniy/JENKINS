@@ -20,26 +20,28 @@ pipeline {
         stage('Test') {
             agent {
                 docker {
-                    image 'alpine'
+                    image 'python:3.12-alpine'
                     args '-u="root"'
                 }
             }
             steps {
                 script {
                     // Установка необхідних залежностей
-                    sh 'apk add --update py3-pip py3-setuptools py3-wheel'
-                    sh 'pip install xmlrunner'
-                    sh 'python3 -m venv /venv'
-                    sh '. /venv/bin/activate && pip install unittest-xml-reporting'
-                }
+                    sh 'pip install --upgrade pip'
+                    sh 'pip install xmlrunner unittest-xml-reporting'
 
-                // Запуск тестів
-                sh 'python3 Testing.py'
+                    // Створення та активація віртуального середовища
+                    sh 'python3 -m venv /venv'
+                    sh '. /venv/bin/activate'
+
+                    // Запуск тестів
+                    sh 'python3 Testing.py'
+                }
             }
             post {
                 always {
                     // Публікація результатів тестів у форматі JUnit
-                    junit 'test-reports/*.xml'
+                    junit 'test-reports/test_results.xml'
                 }
                 success {
                     echo "Testing successful"
