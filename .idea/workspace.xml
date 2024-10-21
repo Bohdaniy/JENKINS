@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58be0936-29dd-4fea-859b-518d3d6c8f14" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Testing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Testing.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +19,17 @@
       <list>
         <option value="Python Unit Test" />
       </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
     </option>
   </component>
   <component name="Git.Settings">
@@ -43,32 +56,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python tests.Python tests for Testing.OrderTest.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for Testing.OrderTest.test_add_order.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for Testing.OrderTest.test_add_order_invalid_id.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for Testing.OrderTest.test_find_order_by_id.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for Testing.OrderTest.test_get_all_orders.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for Testing.OrderTest.test_get_order_count.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for Testing.OrderTest.test_remove_last_order.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for Testing.OrderTest.test_remove_order_by_id.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for Testing.TestOrderManager.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for Testing.TestOrderManager.test_remove_last_order_empty.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in Testing.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/ptichka/PycharmProjects/JENKINS/JENKINS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python tests.Python tests for Testing.OrderTest.executor": "Run",
+    "Python tests.Python tests for Testing.OrderTest.test_add_order.executor": "Run",
+    "Python tests.Python tests for Testing.OrderTest.test_add_order_invalid_id.executor": "Run",
+    "Python tests.Python tests for Testing.OrderTest.test_find_order_by_id.executor": "Run",
+    "Python tests.Python tests for Testing.OrderTest.test_get_all_orders.executor": "Run",
+    "Python tests.Python tests for Testing.OrderTest.test_get_order_count.executor": "Run",
+    "Python tests.Python tests for Testing.OrderTest.test_remove_last_order.executor": "Run",
+    "Python tests.Python tests for Testing.OrderTest.test_remove_order_by_id.executor": "Run",
+    "Python tests.Python tests for Testing.TestOrderManager.executor": "Run",
+    "Python tests.Python tests for Testing.TestOrderManager.test_remove_last_order_empty.executor": "Run",
+    "Python tests.Python tests in Testing.py.executor": "Run",
+    "Python.main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/home/ptichka/PycharmProjects/JENKINS/JENKINS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="Python.main">
+}]]></component>
+  <component name="RunManager" selected="Python tests.Python tests in Testing.py">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="Test program" />
       <option name="ENV_FILES" value="" />
@@ -175,10 +189,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests in Testing.py" />
         <item itemvalue="Python tests.Python tests for Testing.OrderTest.test_add_order_invalid_id" />
         <item itemvalue="Python tests.Python tests for Testing.OrderTest.test_find_order_by_id" />
         <item itemvalue="Python tests.Python tests for Testing.OrderTest.test_get_all_orders" />
-        <item itemvalue="Python tests.Python tests in Testing.py" />
         <item itemvalue="Python tests.Python tests for Testing.OrderTest.test_add_order" />
       </list>
     </recent_temporary>
@@ -213,7 +227,8 @@
       <workItem from="1729496266031" duration="557000" />
       <workItem from="1729497746045" duration="842000" />
       <workItem from="1729506404731" duration="4123000" />
-      <workItem from="1729530776995" duration="2070000" />
+      <workItem from="1729530776995" duration="2401000" />
+      <workItem from="1729534083342" duration="898000" />
     </task>
     <servers />
   </component>

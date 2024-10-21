@@ -1,6 +1,9 @@
 import unittest
-from main import OrderManager
+
 import xmlrunner
+
+from main import OrderManager
+
 import logging
 
 class OrderTest(unittest.TestCase):
