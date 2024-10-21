@@ -7,15 +7,23 @@ stage('Test') {
     }
     steps {
         script {
-            // Установка необхідних залежностей
-            sh 'apk add --update python3 py-pip gcc musl-dev'
-            sh 'python3 -m venv /venv'
+            try {
+                // Установка необхідних залежностей
+                echo "Installing dependencies..."
+                sh 'apk add --update python3 py-pip gcc musl-dev'
+                sh 'python3 -m venv /venv'
 
-            // Активуємо віртуальне середовище і встановлюємо пакети
-            sh '. /venv/bin/activate && pip install unittest-xml-reporting xmlrunner'
+                // Активуємо віртуальне середовище і встановлюємо пакети
+                echo "Activating virtual environment and installing packages..."
+                sh '. /venv/bin/activate && pip install unittest-xml-reporting xmlrunner'
 
-            // Запускаємо тести
-            sh '. /venv/bin/activate && python3 Testing.py'
+                // Запускаємо тести
+                echo "Running tests..."
+                sh '. /venv/bin/activate && python3 Testing.py'
+            } catch (e) {
+                echo "Error during the test stage: ${e}"
+                throw e
+            }
         }
     }
     post {
