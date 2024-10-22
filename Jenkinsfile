@@ -21,7 +21,7 @@ pipeline {
             agent {
                 docker {
                     image 'python:3.12-alpine'
-                    args '-u root' // Тут було зайве лапки
+                    args '-u root' // Оновлено, прибрано зайві лапки
                 }
             }
             steps {
