@@ -1,8 +1,8 @@
 pipeline {
-    options {timestamps()}
+    options { timestamps() }
     agent none
     environment {
-        DOCKER_CREDI = credentials('docker')
+        DOCKER_CREDI = credentials('docker') // Ім'я "docker" має співпадати з існуючим налаштуванням
     }
     stages {
         stage ('Check scm') {
@@ -21,7 +21,7 @@ pipeline {
             agent {
                 docker {
                     image 'python:3.12-alpine'
-                    args '-u="root"'
+                    args '-u root' // Тут було зайве лапки
                 }
             }
             steps {
@@ -48,21 +48,17 @@ pipeline {
                 }
             }
         }
-        }
-    stage ('Publishing to Docker') {
-        agent any
-        steps {
-            sh 'echo $DOCKER_CREDI_PSW | docker login --username $DOCKER_CREDI_USR --password-stdin'
-            sh 'docker build -t bohdaniy/laboratory4 --push .'
-
-        }
-        post {
-            always {
-                sh 'docker logout'
+        stage ('Publishing to Docker') {
+            agent any
+            steps {
+                sh 'echo $DOCKER_CREDI_PSW | docker login --username $DOCKER_CREDI_USR --password-stdin'
+                sh 'docker build -t bohdaniy/laboratory4 --push .'
+            }
+            post {
+                always {
+                    sh 'docker logout'
+                }
             }
         }
-    }
-    }
-}
     }
 }
