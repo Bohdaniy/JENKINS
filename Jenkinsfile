@@ -48,5 +48,21 @@ pipeline {
                 }
             }
         }
+        }
+    stage ('Publishing to Docker') {
+        agent any
+        steps {
+            sh 'echo $DOCKER_CREDI_PSW | docker login --username $DOCKER_CREDI_USR --password-stdin'
+            sh 'docker build -t bohdaniy/laboratory4 --push .'
+
+        }
+        post {
+            always {
+                sh 'docker logout'
+            }
+        }
+    }
+    }
+}
     }
 }
